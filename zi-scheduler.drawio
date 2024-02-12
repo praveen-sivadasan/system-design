@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-12T19:12:20.990Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="rcNXytG_jOzZ_meyOYzK" version="23.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-12T19:46:43.937Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="KfEHPQpbzT6z_5w_Fq2M" version="23.1.2" type="github">
   <diagram name="Page-1" id="ezkMq1eAuabsY91KZPgm">
     <mxGraphModel dx="1854" dy="668" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -7,29 +7,65 @@
         <mxCell id="upiZ4ITVvF9U6T1kBbme-1" value="Scheduler rest service" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="90" y="250" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="upiZ4ITVvF9U6T1kBbme-2" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
-          <mxGeometry x="200" y="410" width="60" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="upiZ4ITVvF9U6T1kBbme-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.145;entryY=0;entryDx=0;entryDy=4.35;entryPerimeter=0;" edge="1" parent="1" source="upiZ4ITVvF9U6T1kBbme-1" target="upiZ4ITVvF9U6T1kBbme-2">
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="upiZ4ITVvF9U6T1kBbme-1" target="upiZ4ITVvF9U6T1kBbme-22">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="360" as="sourcePoint" />
-            <mxPoint x="450" y="310" as="targetPoint" />
+            <mxPoint x="208.69999999999982" y="414.3499999999999" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="upiZ4ITVvF9U6T1kBbme-4" value="Mongo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="200" y="450" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="upiZ4ITVvF9U6T1kBbme-5" value="1. Scheduler request makes CREATED status entries" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="30" y="380" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="upiZ4ITVvF9U6T1kBbme-6" value="ScheduledItem&lt;br&gt;&lt;div&gt;scheduledItemId: string (ObjectId)&lt;/div&gt;&lt;div&gt;&amp;nbsp; scheduledRecordId: string (ObjectId) //&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;scheduledRecordId is a unique id for internal purposes&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; ziTenantId: number&lt;/div&gt;&lt;div&gt;&amp;nbsp; ziUserId: number&lt;/div&gt;&lt;div&gt;&amp;nbsp; scheduledAt: Date // ( GMT )&lt;/div&gt;&lt;div&gt;&amp;nbsp; taskId?: string // External reference to GCP Task&lt;/div&gt;&lt;div&gt;&amp;nbsp; namespace: string // namespace of the scheduler&lt;/div&gt;&lt;div&gt;&amp;nbsp; payload: any // JSON payload&lt;/div&gt;&lt;div&gt;&amp;nbsp; status: Enum // CREATED / SCHEDULED / SCHEDULING_DELAYED / EXECUTED&lt;/div&gt;&lt;div&gt;&amp;nbsp; // audit fields&lt;/div&gt;&lt;div&gt;&amp;nbsp; createdAt: Date&lt;/div&gt;&lt;div&gt;&amp;nbsp; updatedAt: Date&lt;/div&gt;&lt;div&gt;&amp;nbsp; createdBy: number&lt;/div&gt;&lt;div&gt;&amp;nbsp; updatedBy: number&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-6" value="ScheduledItem&lt;br&gt;&lt;br&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; scheduledRecordId: string (ObjectId) //&amp;nbsp;&amp;nbsp;scheduledRecordId is a unique id&amp;nbsp;&lt;/div&gt;&lt;div&gt;scheduledItemId: string (ObjectId) // Remains the same&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; ziTenantId: number&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; ziUserId: number&lt;/div&gt;&lt;div&gt;&amp;nbsp; scheduledAt: Date // ( GMT )&lt;/div&gt;&lt;div&gt;&amp;nbsp; taskId?: string // External reference to GCP Task&lt;/div&gt;&lt;div&gt;&amp;nbsp; namespace: string // namespace of the scheduler&lt;/div&gt;&lt;div&gt;&amp;nbsp; payload: any // JSON payload&lt;/div&gt;&lt;div&gt;&amp;nbsp; status: Enum // CREATED / SCHEDULED / SCHEDULING_DELAYED / EXECUTED&lt;/div&gt;&lt;div&gt;&amp;nbsp; // audit fields&lt;/div&gt;&lt;div&gt;&amp;nbsp; createdAt: Date&lt;/div&gt;&lt;div&gt;&amp;nbsp; updatedAt: Date&lt;/div&gt;&lt;div&gt;&amp;nbsp; createdBy: number&lt;/div&gt;&lt;div&gt;&amp;nbsp; updatedBy: number&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-35" y="510" width="530" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="upiZ4ITVvF9U6T1kBbme-7" value="CDC on creation of entries. If&amp;nbsp;scheduledAt &amp;lt; 30" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-7" value="CDC on creation of entries, CREATED. If&amp;nbsp;scheduledAt &amp;lt; 30" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="290" y="460" width="260" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="upiZ4ITVvF9U6T1kBbme-10" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="570" y="430" width="60" height="30" as="geometry" />
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-10" value="if&amp;nbsp;scheduledRecordId is deleted, then exit. Else schedule to run on google cloud task and change status to SCHEDULED. Updates scheduledItem with taskId.&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="360" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-11" value="Change status to&amp;nbsp;SCHEDULING_DELAYED" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="490" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.13;exitY=0.77;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="upiZ4ITVvF9U6T1kBbme-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="432.75" y="161.60000000000002" as="sourcePoint" />
+            <mxPoint x="260" y="425" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-14" value="Run once everyday. Fetch all entries with status SCHEDULE_DELAYED. If scheduledAt &amp;lt; 30 update status to CREATED." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-16" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Dedicated cloud task &lt;br&gt;per namespace&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="871.94" y="310" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=15;entryPerimeter=0;" edge="1" parent="1" source="upiZ4ITVvF9U6T1kBbme-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="440" as="sourcePoint" />
+            <mxPoint x="870" y="245" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-18" value="Cloud&#xa;Functions" style="sketch=0;html=1;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;align=center;spacingTop=-6;fontSize=11;fontStyle=1;fontColor=#999999;shape=image;aspect=fixed;imageAspect=0;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnY9Imh0dHBzOi8vdmVjdGEuaW8vbmFubyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjE5Ljk4OTk5OTc3MTExODE2NCIgdmlld0JveD0iMCAwIDIwIDE5Ljk4OTk5OTc3MTExODE2NCI+JiN4YTsJPHN0eWxlIHR5cGU9InRleHQvY3NzIj4mI3hhOwkuc3Qwe2ZpbGw6IzQyODVmNDt9JiN4YTsJLnN0MXtmaWxsOiM2NjlkZjY7fSYjeGE7CS5zdDJ7ZmlsbDojYWVjYmZhO30mI3hhOwk8L3N0eWxlPiYjeGE7CTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0zIDMuOTlMMCA2LjQydjcuMTNsMyAyLjQ0eiIvPiYjeGE7CTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zIDMuOTlsLTMgNCAzLTJ6bS0zIDhsMyA0di0yeiIvPiYjeGE7CTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0wIDE1Ljk5bDQgNCAyLTItNi02em0uMDEtOEw1Ljk5IDJsLTItMkwwIDMuOTl6Ii8+JiN4YTsJPHBhdGggY2xhc3M9InN0MSIgZD0iTTE3IDE2bDMtMi40MlY2LjQ0TDE3IDR6Ii8+JiN4YTsJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE3IDE2bDMtNC0zIDJ6bTMtOGwtMy00djJ6Ii8+JiN4YTsJPGcgY2xhc3M9InN0MiI+JiN4YTsJCTxwYXRoIGQ9Ik0yMCA0bC00LTQtMiAyIDYgNnptLS4wMSA4bC01Ljk4IDUuOTkgMiAyTDIwIDE2eiIvPiYjeGE7CQk8Y2lyY2xlIGN4PSI2IiBjeT0iOS45OSIgcj0iMSIvPiYjeGE7CQk8Y2lyY2xlIGN4PSIxMCIgY3k9IjkuOTkiIHI9IjEiLz4mI3hhOwkJPGNpcmNsZSBjeD0iMTMuOTkiIGN5PSI5Ljk5IiByPSIxIi8+JiN4YTsJPC9nPiYjeGE7PC9zdmc+;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="170" width="42" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-19" value="Cloud&#xa;Tasks" style="sketch=0;html=1;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;align=center;spacingTop=-6;fontSize=11;fontStyle=1;fontColor=#999999;shape=image;aspect=fixed;imageAspect=0;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnY9Imh0dHBzOi8vdmVjdGEuaW8vbmFubyIgd2lkdGg9IjM3Ni4zNDk5ODYzODk2NDkzNiIgaGVpZ2h0PSIzMDcuNjg0MDE3OTkzMzY5MjUiIHZpZXdCb3g9IjAgMCA5OS41NzU5OTYzOTg5MjU3OCA4MS40MDgwMDQ3NjA3NDIxOSI+JiN4YTs8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiYjeGE7CS5zdDB7ZmlsbDojNjY5ZGY2O30mI3hhOwkuc3Qxe2ZpbGw6IzQyODVmNDt9JiN4YTs8L3N0eWxlPiYjeGE7CTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wIDB2NDAuODc1aDEwVjB6bTIyLjM5NCAwdjQwLjg3NWgxMFYwem0yMi4zOTQgMHY0MC44NzVoMTBWMHptMjIuMzk0IDB2NDAuODc1aDEwVjB6bTIyLjM5NCAwdjQwLjg3NWgxMFYweiIvPiYjeGE7CTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik04OS41NzYgNDAuODc1djQwLjUzM2gxMFY0MC44NzV6bS0yMi4zOTQgMHY0MC41MzNoMTBWNDAuODc1em0tMjIuMzk0IDB2NDAuNTMzaDEwVjQwLjg3NXptLTIyLjM5NCAwdjQwLjUzM2gxMFY0MC44NzV6TTAgNDAuODc1djQwLjUzM2gxMFY0MC44NzV6Ii8+JiN4YTs8L3N2Zz4=;" vertex="1" parent="1">
+          <mxGeometry x="890" y="204" width="93.88" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-21" value="Cloud&#xa;Scheduler" style="sketch=0;html=1;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;align=center;spacingTop=-6;fontSize=11;fontStyle=1;fontColor=#999999;shape=image;aspect=fixed;imageAspect=0;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnY9Imh0dHBzOi8vdmVjdGEuaW8vbmFubyIgd2lkdGg9IjM2MC4zMDM3NjY4NjA4MzYzIiBoZWlnaHQ9IjM3OC4wNTExNTgwNzc0MDg4IiB2aWV3Qm94PSItMC4wMDAxNjI0MjExNDM2MTM3NTU3IC0wLjAwMDEwMDAwNTk0OTIwNzExNTkyIDk1LjMzMDI2MTIzMDQ2ODc1IDEwMC4wMjYxMDAxNTg2OTE0Ij4mI3hhOzxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+JiN4YTsJLnN0MHtmaWxsOiM0Mjg1ZjQ7fSYjeGE7CS5zdDF7ZmlsbDojYWVjYmZhO30mI3hhOwkuc3Qye2ZpbGw6IzY2OWRmNjt9JiN4YTs8L3N0eWxlPiYjeGE7CTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik03OS45NzEgNzcuNzE1bC03LjM1OSA3LjQ4OCA4LjYzOSA4LjQ5IDcuMzU5LTcuNDg4em0tNjUuMDk2LjA2MWwtOC42NDEgOC40OTIgNy4zNjEgNy40ODggOC42MzktOC40OXoiLz4mI3hhOwk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNNzkuNTUzLjIyMWE1LjI1IDUuMjUgMCAwIDAtMy42NiA4Ljk4NEw4Ni4zODkgMTkuNThhNS4yNSA1LjI1IDAgMCAwIDguOTQxLTMuNzY1IDUuMjUgNS4yNSAwIDAgMC0xLjU2LTMuNzA0TDgzLjI3NSAxLjczOEE1LjI1IDUuMjUgMCAwIDAgNzkuNTUzLjIyMXpNMTUuOTE2IDBhNS4yNSA1LjI1IDAgMCAwLTMuNzIzIDEuNTE2TDEuNjk5IDExLjg5MWE1LjI1IDUuMjUgMCAwIDAtLjA0MyA3LjQyNCA1LjI1IDUuMjUgMCAwIDAgNy40MjQuMDQzTDE5LjU3NiA4Ljk4MkE1LjI1IDUuMjUgMCAwIDAgMTUuOTE2IDB6Ii8+JiN4YTsJPHBhdGggY2xhc3M9InN0MCIgZD0iTTQ4LjEzOCAyNi4yNGMxMy4zNDcgMCAyNS40MzIgMTEuMTM2IDI1LjMxIDI2LjQ4MSAwIDE1LjExLTEyLjI2NyAyNS42NzMtMjUuMTg5IDI1LjY3My0xMS4xNDkgMC0xOC4zMTctNS4xNzEtMjEuOTYtMTAuNzM4bDIxLjgzOS0xNS4wOTd6Ii8+JiN4YTsJPHBhdGggY2xhc3M9InN0MiIgZD0iTTgxLjI1IDkzLjY5M2w0LjY2NCA0LjU4NmE1LjI1IDUuMjUgMCAxIDAgNy4zNjEtNy40OWwtNC42NjYtNC41ODR6TTYuMjM0IDg2LjI2OEwxLjU3IDkwLjg1MWE1LjI1IDUuMjUgMCAwIDAtLjA2NSA3LjQyNCA1LjI1IDUuMjUgMCAwIDAgNy40MjQuMDY0bDQuNjY2LTQuNTg0ek00Ny4zNzEgNS41NzhDMjEuMzQ5IDUuNTc4LjE0NiAyNi43NzkuMTQ2IDUyLjgwMXMyMS4yMDMgNDcuMjI1IDQ3LjIyNSA0Ny4yMjUgNDcuMjI1LTIxLjIwMyA0Ny4yMjUtNDcuMjI1UzczLjM5MyA1LjU3OCA0Ny4zNzEgNS41Nzh6bTAgMTBhMzcuMTUgMzcuMTUgMCAwIDEgMzcuMjI1IDM3LjIyM2MwIDIwLjYxNy0xNi42MDcgMzcuMjI1LTM3LjIyNSAzNy4yMjVTMTAuMTQ2IDczLjQxOCAxMC4xNDYgNTIuODAxYTM3LjE1IDM3LjE1IDAgMCAxIDM3LjIyNS0zNy4yMjN6Ii8+JiN4YTs8L3N2Zz4=;" vertex="1" parent="1">
+          <mxGeometry x="440" y="108" width="78.1" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-22" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#C925D1;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.documentdb_with_mongodb_compatibility;" vertex="1" parent="1">
+          <mxGeometry x="191" y="412" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-23" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.mongodb" vertex="1" parent="1">
+          <mxGeometry x="160" y="436" width="21.2" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="upiZ4ITVvF9U6T1kBbme-24" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1040" y="190" as="sourcePoint" />
+            <mxPoint x="990" y="210" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
